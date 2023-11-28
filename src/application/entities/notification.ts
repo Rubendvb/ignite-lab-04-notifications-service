@@ -3,7 +3,7 @@ export interface NotificationProps {
   content: string;
   category: string;
   readAt?: Date | null;
-  createAd: Date;
+  createdAd: Date;
 }
 
 export class Notification {
@@ -55,5 +55,12 @@ export class Notification {
 
   public get readAt(): Date | null | undefined {
     return this.props.readAt;
+  }
+
+  /**
+   * createdAd
+   */
+  public get createdAd(): Date {
+    return this.props.createdAd;
   }
 }
